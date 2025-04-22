@@ -1,12 +1,9 @@
 #!/bin/bash
 set -e
 
-BUCKET="spatialfusionlm"
-S3_PREFIX="datasets"
+BASE_URL="https://spatialfusionlm.s3.amazonaws.com/datasets"
 TARGET_DIR="datasets"
 DATASET_LIST=("indoor_0")
-
-AWS_PROFILE="fusion"
 
 echo "📦 Available datasets:"
 for i in "${!DATASET_LIST[@]}"; do
@@ -26,10 +23,23 @@ for i in "${INDICES[@]}"; do
     fi
 
     LOCAL_PATH="${TARGET_DIR}/${DATASET}"
-    S3_PATH="s3://${BUCKET}/${S3_PREFIX}/${DATASET}"
+    MANIFEST_URL="${BASE_URL}/${DATASET}/manifest.txt"
 
-    echo "⬇️  Syncing $DATASET from ${S3_PATH} → ${LOCAL_PATH} ..."
-    aws s3 sync "$S3_PATH" "$LOCAL_PATH" --profile "$AWS_PROFILE"
+    echo "⬇️  Downloading manifest for ${DATASET}..."
+    mkdir -p "$LOCAL_PATH"
+    wget -q -O "$LOCAL_PATH/manifest.txt" "$MANIFEST_URL"
+
+    echo "📄 Found files:"
+    cat "$LOCAL_PATH/manifest.txt"
+
+    echo "⬇️  Downloading files..."
+    while read -r filename; do
+        wget -q --show-progress \
+          -O "${LOCAL_PATH}/${filename}" \
+          "${BASE_URL}/${DATASET}/${filename}"
+    done < "$LOCAL_PATH/manifest.txt"
 
     echo "✅ $DATASET downloaded to ${LOCAL_PATH}"
+
+    rm -f "$LOCAL_PATH/manifest.txt"
 done

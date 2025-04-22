@@ -12,7 +12,7 @@ if docker ps --format '{{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then
 else
   echo "🚀 Building and launching new container '${CONTAINER_NAME}'..."
   
-  docker build --build-arg UID=${HOST_UID} --build-arg GID=${HOST_GID} --build-arg USERNAME=${USERNAME} -t ros_llm .
+  docker build --build-arg UID=${HOST_UID} --build-arg GID=${HOST_GID} --build-arg USERNAME=${USERNAME} -t ros_llm ./docker
 
   xhost +local:docker
   xhost +SI:localuser:$(whoami)
@@ -35,11 +35,11 @@ else
     -e QT_X11_NO_MITSHM=1 \
     -v /tmp/runtime-root:/tmp/runtime-root \
     -v $HOME/.Xauthority:/root/.Xauthority \
-    -v spatialfusion-lm/FoundationStereo:/FoundationStereo \
-    -v spatialfusion-lm/UniK3D:/UniK3D \
-    -v spatialfusion-lm/SpatialLM:/SpatialLM \
+    -v ./spatialfusion-lm/FoundationStereo:/FoundationStereo \
+    -v ./spatialfusion-lm/UniK3D:/UniK3D \
+    -v ./spatialfusion-lm/SpatialLM:/SpatialLM \
     -v ./datasets:/datasets \
-    -v spatialfusion-lm/ros2_ws:/ros2_ws \
+    -v ./spatialfusion-lm/ros2_ws:/ros2_ws \
     --device /dev/dri \
     --user ${HOST_UID}:${HOST_GID} \
     ros_llm

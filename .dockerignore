@@ -5,6 +5,7 @@
 
 # Ignore datasets or large files
 *.bag
+*.db3
 *.mp4
 *.avi
 *.mov
