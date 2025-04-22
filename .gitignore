@@ -2,3 +2,5 @@ spatialfusion-lm/ros2_ws/build
 spatialfusion-lm/ros2_ws/install
 spatialfusion-lm/ros2_ws/log
 *.pyc
+spatialfusion-lm-bags
+datasets

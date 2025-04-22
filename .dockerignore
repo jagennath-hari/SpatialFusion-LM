@@ -1,0 +1,25 @@
+# Ignore version control
+.git
+.gitmodules
+.gitignore
+
+# Ignore datasets or large files
+*.bag
+*.mp4
+*.avi
+*.mov
+*.zip
+
+# Ignore Python cache and logs
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+# Ignore ROS2 build files
+build/
+install/
+log/
+
+# Ignore Docker cache files
+*.tar
