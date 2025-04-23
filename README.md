@@ -269,6 +269,10 @@ Input images are automatically resized to model-specific inference resolution, a
 | Mono+   | 126.1               | 7.87    | 4460 MiB  |
 | Stereo  | 292.5               | 3.35    | 2126 MiB  |
 
+## 🤝 Contributing
+
+I welcome pull requests and suggestions! If you want to add a new dataset, model backend, or visualization utility, open an issue or fork this repo!
+
 ## 📖 Citation
 If you found this code/work to be useful in your own research, please considering citing the following:
 ```bibtex
@@ -297,5 +301,4 @@ If you found this code/work to be useful in your own research, please considerin
 ```
 
 ## 📄 License
-This software is released under the [GNU General Public License v3.0 (GPL-3.0)](LICENSE).  
-You are free to use, modify, and distribute this code under the terms of the license, but **derivative works must also be open-sourced** under GPL-3.0.
+This software is released under the [GNU General Public License v3.0 (GPL-3.0)](LICENSE). You are free to use, modify, and distribute this code under the terms of the license, but **derivative works must also be open-sourced** under GPL-3.0.
