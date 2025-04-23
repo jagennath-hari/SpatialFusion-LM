@@ -190,3 +190,16 @@ ros2 launch llm_ros llm.launch.py \
 ```
 
 ### 2️⃣ Parameter Descriptions
+```shell
+ros2 launch llm_ros llm.launch.py -s
+```
+Parameter | Description | Default | ROS Msg Type
+rgb_image | RGB image topic | '' | sensor_msgs/msg/Image
+rgb_info | RGB camera info topic | '' | sensor_msgs/msg/CameraInfo
+left_image | Left stereo image topic | '' | sensor_msgs/msg/Image
+right_image | Right stereo image topic | '' | sensor_msgs/msg/Image
+left_info | Left camera info topic | '' | sensor_msgs/msg/CameraInfo
+right_info | Right camera info topic | '' | sensor_msgs/msg/CameraInfo
+baseline | Stereo camera baseline (in meters) | '0.0' | float (launch param)
+rerun | Enable Rerun logging | 'True' | bool (launch param)
+spatialLM | Enable 3D layout prediction via SpatialLM | 'True' | bool (launch param)
