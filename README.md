@@ -45,8 +45,16 @@ bash scripts/download_weights.sh
 
 ### 🗃️ Download datasets
 
-This script will prompt you to select one or more datasets:
+This script will prompt you to select one or more datasets to download:
 
 ```shell
 bash scripts/download_dataset.sh
+```
+
+## 🐳 Run in Docker
+
+The easiest way to launch SpatialFusion-LM is via Docker. The following command will automatically build the image (if needed) and run the container with full GPU and ROS2 support:
+
+```shell
+bash run_container.sh
 ```
