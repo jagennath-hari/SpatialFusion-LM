@@ -71,10 +71,21 @@ bash run_container.sh
 ## 🧪 Demo
 
 ```shell
-bash run_container.sh
+ros2 launch llm_ros llm_demo.launch.py
 ```
 
 <p align="center">
   <img src="media/demo_stereo_indoor_0.gif" alt="SpatialFusion-LM Stereo Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing stereo depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
+</p>
+
+### Monocular Demo Without Rerun
+
+```shell
+ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
+```
+
+<p align="center">
+  <img src="media/demo_mono+_indoor_0_rviz.gif" alt="SpatialFusion-LM Monocular+ Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing stereo monocular+ estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
