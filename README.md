@@ -242,3 +242,5 @@ These are the outputs published by the core_node.py:
 |`/spatialLM/image`|	RGB image with projected 3D layout|	`sensor_msgs/msg/Image`|
 |`/spatialLM/boxes`|	Predicted 3D layout objects (e.g., boxes)|	`visualization_msgs/msg/MarkerArray`|
 |`/tf`|	Transform tree| (e.g., map → camera)|	`tf2_msgs/msg/TFMessage`|
+
+## ⚖️ Depth Comparison
