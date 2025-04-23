@@ -65,9 +65,6 @@ RUN apt update && apt install -y \
 COPY ./UniK3D /UniK3D
 RUN pip3 install -e /UniK3D
 
-# Download UniK3D model into HuggingFace cache
-RUN python3 -c "from unik3d.models import UniK3D; UniK3D.from_pretrained('lpiccinelli/unik3d-vitl')"
-
 ARG USERNAME=rosuser
 ARG UID=1000
 ARG GID=1000
@@ -75,6 +72,10 @@ ARG GID=1000
 RUN groupadd -g $GID $USERNAME && \
     useradd -m -u $UID -g $GID -s /bin/bash $USERNAME && \
     echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+USER $USERNAME
+RUN python3 -c "from unik3d.models import UniK3D; UniK3D.from_pretrained('lpiccinelli/unik3d-vitl')"
+USER root
     
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh

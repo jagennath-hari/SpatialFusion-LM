@@ -13,3 +13,8 @@ The architecture decouples 3D scene inference into three core stages: (1) neural
 SpatialFusion-LM supports real-time inference, dataset extensibility, and structured logging through Rerun and ROS2, making it suitable for research in vision-language grounding, scene reconstruction, and robotics.
 
 </div>
+
+<p align="center">
+  <img src="media/demo_indoor_0.gif" alt="SpatialFusion-LM Indoor Demo" width="720"/><br/>
+  <em>Figure: SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
+</p>

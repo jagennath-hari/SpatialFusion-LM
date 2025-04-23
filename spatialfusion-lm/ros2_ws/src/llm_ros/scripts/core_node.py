@@ -127,7 +127,10 @@ class CoreNode(Node):
             stamp = self.get_clock().now().to_msg()
             self.publish_floorplan_markers(floor_plan, stamp)
             overlay_img = self.project_and_create_overlay(image, intrinsics, floor_plan)
-            self.image_overlay_pub.publish(self.create_img_msg(overlay_img, stamp))
+            try:
+                self.image_overlay_pub.publish(self.create_img_msg(overlay_img, stamp))
+            except TypeError as e:
+                pass
         else:
             overlay_img = None
         if self.rerun_visualizer:
@@ -146,7 +149,10 @@ class CoreNode(Node):
             stamp = self.get_clock().now().to_msg()
             self.publish_floorplan_markers(floor_plan, stamp)
             overlay_img = self.project_and_create_overlay(image, intrinsics, floor_plan)
-            self.image_overlay_pub.publish(self.create_img_msg(overlay_img, stamp))
+            try:
+                self.image_overlay_pub.publish(self.create_img_msg(overlay_img, stamp))
+            except TypeError as e:
+                pass
         else:
             overlay_img = None
         if self.rerun_visualizer:
@@ -164,7 +170,10 @@ class CoreNode(Node):
             stamp = self.get_clock().now().to_msg()
             self.publish_floorplan_markers(floor_plan, stamp)
             overlay_img = self.project_and_create_overlay(left_image, left_info, floor_plan)
-            self.image_overlay_pub.publish(self.create_img_msg(overlay_img, stamp))
+            try:
+                self.image_overlay_pub.publish(self.create_img_msg(overlay_img, stamp))
+            except TypeError as e:
+                pass
         else:
             overlay_img = None
         if self.rerun_visualizer:
