@@ -27,7 +27,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - 🧠 Language-conditioned spatial layout prediction
 - 🧩 Modular ROS2 architecture (plug-and-play components)
 - 🌀 Real-time inference and visualization
-- 📊 Integrated logging via [Rerun](https://www.rerun.io/)
+- 📊 Integrated logging via [**Rerun**](https://www.rerun.io/)
 
 ## ✅ TODO
 
@@ -106,7 +106,7 @@ The `llm_demo.launch.py` file accepts the following arguments:
 |:-------------|:-------:|:---------------------------------------------------------------------------:|---------------------:|
 | `mode`       | string  | Input mode: `mono`, `mono+`, or `stereo`                                    | `stereo`             |
 | `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `true`               |
-| `rerun`      | bool    | Enable or disable logging to [Rerun](https://rerun.io)                      | `true`               |
+| `rerun`      | bool    | Enable or disable logging to [**Rerun**](https://rerun.io)                      | `true`               |
 | `rviz`       | bool    | Enable or disable RVIZ visualization                                        | `true`               |
 | `bag_path`   | string  | Path to the ROS2 bag file (e.g., `/datasets/indoor_0`)                      | `/datasets/indoor_0` |
 
