@@ -136,8 +136,9 @@ The `llm_demo.launch.py` file accepts the following arguments:
   🧪 Ideal for calibrated cameras (e.g., using `/camera_info`).
 
 * **`stereo`** – Left and right **rectified images**, intrinsics, and baseline are required  
-  [**FoundationStereo**](https://nvlabs.github.io/FoundationStereo/) performs dense stereo matching to compute **high-precision, metric depth** via triangulation.  
-  🛡️ This mode is the most **robust and accurate**, especially in real-world or textured environments.
+  [**FoundationStereo**](https://nvlabs.github.io/FoundationStereo/) uses a ViT-based architecture to predict **dense disparity maps** from stereo pairs.  
+  Metric depth is then computed using the stereo baseline and intrinsics, and converted to a 3D point cloud.  
+  🛡️ This mode provides the most **robust and accurate** depth, especially in structured or texture-rich environments.
 
 ## 🖼️ Demo Gallery
 
