@@ -168,7 +168,7 @@ ros2 launch llm_ros llm.launch.py \
     spatialLM:=true
 ```
 
-#### This simulates mode:=mono+ as there no rgb_info provided.
+#### This simulates mode:=mono+ as rgb_info is provided.
 ```shell
 ros2 launch llm_ros llm.launch.py \
     rgb_image:=/your_camera/image_rect \
@@ -177,7 +177,7 @@ ros2 launch llm_ros llm.launch.py \
     spatialLM:=true
 ```
 
-#### This simulates mode:=mono+ as there no rgb_info provided.
+#### This simulates mode:=stereo as there left and right topics, left_info and right_info, and baseline is provied.
 ```shell
 ros2 launch llm_ros llm.launch.py \
     left_image:=/stereo/left/image_rect \
