@@ -36,7 +36,6 @@ else
     -v /tmp/runtime-root:/tmp/runtime-root \
     -v $HOME/.Xauthority:/root/.Xauthority \
     -v ./spatialfusion-lm/FoundationStereo:/FoundationStereo \
-    -v ./spatialfusion-lm/UniK3D:/UniK3D \
     -v ./spatialfusion-lm/SpatialLM:/SpatialLM \
     -v ./datasets:/datasets \
     -v ./spatialfusion-lm/ros2_ws:/ros2_ws \
