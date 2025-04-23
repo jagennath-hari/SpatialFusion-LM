@@ -273,6 +273,8 @@ Input images are automatically resized to model-specific inference resolution, a
 
 I welcome pull requests and suggestions! If you want to add a new dataset, model backend, or visualization utility, open an issue or fork this repo!
 
+If you find any bug in the code, please report to jh7454@nyu.edu
+
 ## 📖 Citation
 If you found this code/work to be useful in your own research, please considering citing the following:
 ```bibtex
