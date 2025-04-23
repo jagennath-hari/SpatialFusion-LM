@@ -268,3 +268,30 @@ Input images are automatically resized to model-specific inference resolution, a
 | Mono    | 169.6               | 5.85    | 4440 MiB  |
 | Mono+   | 126.1               | 7.87    | 4460 MiB  |
 | Stereo  | 292.5               | 3.35    | 2126 MiB  |
+
+## 📖 Citation
+If you found this code/work to be useful in your own research, please considering citing the following:
+```bibtex
+@article{wen2025stereo,
+  title={FoundationStereo: Zero-Shot Stereo Matching},
+  author={Bowen Wen and Matthew Trepte and Joseph Aribido and Jan Kautz and Orazio Gallo and Stan Birchfield},
+  journal={CVPR},
+  year={2025}
+}
+```
+```bibtex
+@inproceedings{piccinelli2025unik3d,
+    title     = {{U}ni{K3D}: Universal Camera Monocular 3D Estimation},
+    author    = {Piccinelli, Luigi and Sakaridis, Christos and Segu, Mattia and Yang, Yung-Hsu and Li, Siyuan and Abbeloos, Wim and Van Gool, Luc},
+    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2025}
+}
+```
+```bibtex
+@misc{spatiallm,
+  title        = {SpatialLM: Large Language Model for Spatial Understanding},
+  author       = {ManyCore Research Team},
+  howpublished = {\url{https://github.com/manycore-research/SpatialLM}},
+  year         = {2025}
+}
+```
