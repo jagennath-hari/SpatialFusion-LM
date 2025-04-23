@@ -15,7 +15,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 </div>
 
 <p align="center">
-  <img src="media/demo_mono_indoor_0.gif" alt="SpatialFusion-LM Mono Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <img src="media/demo_mono_indoor_0.gif" alt="SpatialFusion-LM Monocular LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
@@ -75,7 +75,7 @@ ros2 launch llm_ros llm_demo.launch.py
 ```
 
 <p align="center">
-  <img src="media/demo_stereo_indoor_0.gif" alt="SpatialFusion-LM Stereo Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <img src="media/demo_stereo_indoor_0.gif" alt="SpatialFusion-LM Stereo LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing stereo depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
@@ -86,7 +86,7 @@ ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
 ```
 
 <p align="center">
-  <img src="media/demo_mono+_indoor_0_rviz.gif" alt="SpatialFusion-LM Monocular+ Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <img src="media/demo_mono+_indoor_0_rviz.gif" alt="SpatialFusion-LM Monocular+ LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing stereo monocular+ estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
@@ -122,4 +122,21 @@ The `llm_demo.launch.py` file accepts the following arguments:
                                                                +
                                                             baseline
 </pre>
+</p>
+
+## 🖼️ Demo Gallery
+
+Below are example configurations showing how SpatialFusion-LM behaves with different launch options. 
+
+---
+
+### 🧠 SpatialLM Disabled (mono, rerun)
+
+```shell
+ros2 launch llm_ros llm_demo.launch.py mode:=mono spatialLM:=false rerun:=true rviz:=false
+```
+
+<p align="center">
+  <img src="media/demo_mono_depth_indoor_0.gif" alt="SpatialFusion-LM Monocular Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing stereo monocular+ estimation and 3D reconstruction on indoor scene <code>indoor_0</code>.</em>
 </p>
