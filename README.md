@@ -36,6 +36,28 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - [ ] Fix [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) CUDA Memeory stream for async error while running [**SpatialLM**](https://manycore-research.github.io/SpatialLM/) in parallel
 - [ ] Expand evaluation to TUM, Replica, and NYUv2 datasets with one more custom recorded dataset
 
+## 📚 Table of Contents
+
+- [Setup](#️-setup)  
+  - [Tested Configuration](#️-tested-configuration)  
+  - [Clone the repository](#-clone-the-repository-and-its-submodules)  
+  - [Download model weights](#-download-the-model-foundationstereo-and-spatiallm-weights)  
+  - [Download datasets](#️-download-datasets)  
+- [Run in Docker](#-run-in-docker)  
+- [Demo](#-demo)  
+- [Launch Configuration Options](#️-launch-configuration-options)  
+- [Mode Descriptions](#-mode-descriptions)  
+- [Demo Gallery](#️-demo-gallery)  
+- [Using Your Own ROS2 Topics](#️-using-spatialfusion-lm-with-your-own-ros2-topics)  
+- [Output Topics](#-output-topics)  
+- [Depth Comparison](#️-depth-comparison)  
+- [Performance Benchmarks](#-performance-benchmarks)  
+- [Contributing](#-contributing)  
+- [Citation](#-citation)  
+- [License](#-license)  
+- [Acknowledgement](#-acknowledgement)
+
+
 ## ⚙️ Setup
 ### 🖥️ Tested Configuration
 SpatialFusion-LM has been tested on:
