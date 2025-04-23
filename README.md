@@ -31,6 +31,16 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - 📊 Integrated logging via [Rerun](https://www.rerun.io/)
 
 ## ⚙️ Setup
+### 🖥️ Tested Configuration
+SpatialFusion-LM has been tested on:
+
+- 🐧 **Ubuntu:** 24.04  
+- 🧠 **GPU:** NVIDIA RTX A6000  
+- ⚙️ **CUDA:** 12.8  
+- 🧊 **Environment:** Docker container with GPU support
+
+> Other modern Ubuntu + CUDA setups may work, but this is the validated reference configuration.
+
 ### 🧬 Clone the repository and its submodules
 
 ```shell
