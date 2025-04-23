@@ -194,7 +194,7 @@ ros2 launch llm_ros llm.launch.py \
 ros2 launch llm_ros llm.launch.py -s
 ```
 |Parameter | Description | Default | ROS Msg Type |
----------------------------------------------------
+|----------|-------------|---------|--------------|
 |rgb_image | RGB image topic | '' | sensor_msgs/msg/Image |
 |rgb_info | RGB camera info topic | '' | sensor_msgs/msg/CameraInfo |
 |left_image | Left stereo image topic | '' | sensor_msgs/msg/Image |
