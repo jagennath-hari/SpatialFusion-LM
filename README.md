@@ -295,3 +295,7 @@ If you found this code/work to be useful in your own research, please considerin
   year         = {2025}
 }
 ```
+
+## 📄 License
+This software is released under the [GNU General Public License v3.0 (GPL-3.0)](LICENSE).  
+You are free to use, modify, and distribute this code under the terms of the license, but **derivative works must also be open-sourced** under GPL-3.0.
