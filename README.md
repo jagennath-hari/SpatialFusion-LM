@@ -89,3 +89,15 @@ ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
   <img src="media/demo_mono+_indoor_0_rviz.gif" alt="SpatialFusion-LM Monocular+ Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing stereo monocular+ estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
+
+## ⚙️ Launch Configuration Options
+
+The `llm_demo.launch.py` file accepts the following arguments:
+
+|   Argument   |  Type   |                               Description                                   |       Default        |
+|--------------|---------|-----------------------------------------------------------------------------|----------------------|
+| `mode`       | string  | Input mode: `mono`, `mono+`, or `stereo`                                    | `stereo`             |
+| `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `True`               |
+| `rerun`      | bool    | Enable or disable logging to [Rerun](https://rerun.io)                      | `True`               |
+| `rviz`       | bool    | Enable or disable RViz2 visualization                                       | `True`               |
+| `bag_path`   | string  | Path to the ROS 2 bag file (e.g., `/datasets/indoor_0`)                     | `/datasets/indoor_0` |
