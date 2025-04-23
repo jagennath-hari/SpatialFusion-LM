@@ -249,3 +249,8 @@ These are the outputs published by the core_node.py:
   <img src="media/depth_comparison.gif" alt="Depth Comparison Loop" style="max-width: 100%; height: auto;"/><br/>
   <em>Comparison of predicted depth maps from <code>stereo</code>, <code>mono+</code>, and <code>mono</code> modes respectively.</em>
 </p>
+
+## 📈 Performance Benchmarks
+
+Measured on a single NVIDIA RTX A6000 (48 GB VRAM) at 1920×1080 resolution.
+Input images are automatically resized to model-specific inference resolution, and values may vary depending on hardware, backend load, and ROS2 message overhead.
