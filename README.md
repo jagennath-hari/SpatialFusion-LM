@@ -104,7 +104,8 @@ The `llm_demo.launch.py` file accepts the following arguments:
 
 ### 📸 Mono, 📷 Mono+, 📷 📷 Stereo?
 
-<p align="center">
+<div align="center">
+
 <pre>
        +-----------+
        |  mode=?   |
@@ -120,4 +121,5 @@ The `llm_demo.launch.py` file accepts the following arguments:
                     +
                   baseline   
 </pre>
-</p>
+
+</div>
