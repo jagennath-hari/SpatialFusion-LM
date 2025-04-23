@@ -257,6 +257,12 @@ Input images are automatically resized to model-specific inference resolution, a
 
 > Measured using Headless mode without Rerun or RVIZ.
 
+<p align="center">
+  <img src="media/inference_time.png" alt="Inference Time" width="30%" style="margin-right:10px;">
+  <img src="media/average_fps.png" alt="Average FPS" width="30%" style="margin:0 10px;">
+  <img src="media/vram_usage.png" alt="VRAM Usage" width="30%" style="margin-left:10px;">
+</p>
+
 | Mode    | Inference Time (ms) | Avg FPS | VRAM Used |
 |:-------:|:-------------------:|:-------:|:---------:|
 | Mono    | 169.6               | 5.85    | 4440 MiB  |

@@ -3,3 +3,4 @@ spatialfusion-lm/ros2_ws/install
 spatialfusion-lm/ros2_ws/log
 *.pyc
 datasets
+__pycache__
