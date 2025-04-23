@@ -163,30 +163,30 @@ This version of the launch file allows you to specify **raw topic names directly
 #### This simulates mode:=mono as there no rgb_info provided.
 ```shell
 ros2 launch llm_ros llm.launch.py \
-    rgb_image:=/your_camera/image_rect \
-    rerun:=true \
-    spatialLM:=true
+  rgb_image:=/your_camera/image_rect \
+  rerun:=true \
+  spatialLM:=true
 ```
 
 #### This simulates mode:=mono+ as rgb_info is provided.
 ```shell
 ros2 launch llm_ros llm.launch.py \
-    rgb_image:=/your_camera/image_rect \
-    rgb_info:=/your_camera/camera_info \
-    rerun:=true \
-    spatialLM:=true
+  rgb_image:=/your_camera/image_rect \
+  rgb_info:=/your_camera/camera_info \
+  rerun:=true \
+  spatialLM:=true
 ```
 
 #### This simulates mode:=stereo as there left and right topics, left_info and right_info, and baseline is provied.
 ```shell
 ros2 launch llm_ros llm.launch.py \
-    left_image:=/stereo/left/image_rect \
-    right_image:=/stereo/right/image_rect \
-    left_info:=/stereo/left/camera_info \
-    right_info:=/stereo/right/camera_info \
-    baseline:=0.12 \
-    rerun:=true \
-    spatialLM:=true
+  left_image:=/stereo/left/image_rect \
+  right_image:=/stereo/right/image_rect \
+  left_info:=/stereo/left/camera_info \
+  right_info:=/stereo/right/camera_info \
+  baseline:=0.12 \
+  rerun:=true \
+  spatialLM:=true
 ```
 
 ### 2️⃣ Parameter Descriptions
