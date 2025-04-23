@@ -33,7 +33,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 ## ⚙️ Setup
 Clone the repository and its submodules
 
-<code>
+```shell
 git clone --recursive https://github.com/jagennath-hari/SpatialFusion-LM.git
 cd SpatialFusion-LM
-</code>
+```
