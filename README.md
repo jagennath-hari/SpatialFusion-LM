@@ -212,8 +212,8 @@ These are the outputs published by the core_node.py:
 
 |Topic|Description|ROS Msg Type|
 |:----|:---------:|-----------:|
-|/depth|	Predicted depth map (1-channel float)|	sensor_msgs/msg/Image|
-|/cloud|	Reconstructed 3D point cloud|	sensor_msgs/msg/PointCloud2|
-|/overlay|	RGB image with projected 3D layout|	sensor_msgs/msg/Image|
-|/layout|	Predicted 3D layout objects (e.g., boxes)|	visualization_msgs/msg/MarkerArray|
+|/spatialLM/depth|	Predicted depth map (1-channel float)|	sensor_msgs/msg/Image|
+|/spatialLM/cloud|	Reconstructed 3D point cloud|	sensor_msgs/msg/PointCloud2|
+|/spatialLM/image|	RGB image with projected 3D layout|	sensor_msgs/msg/Image|
+|/spatialLM/boxes|	Predicted 3D layout objects (e.g., boxes)|	visualization_msgs/msg/MarkerArray|
 |/tf|	Transform tree| (e.g., map → camera)|	tf2_msgs/msg/TFMessage|
