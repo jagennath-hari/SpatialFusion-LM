@@ -151,3 +151,42 @@ ros2 launch llm_ros llm_demo.launch.py mode:=mono spatialLM:=false rerun:=true r
   <img src="media/demo_stereo_depth_indoor.gif" alt="SpatialFusion-LM Stereo Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing stereo estimation and 3D reconstruction on indoor scene <code>indoor_0</code>.</em>
 </p>
+
+## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
+
+To run SpatialFusion-LM on a live ROS2 system or your own dataset:
+
+### 1️⃣ Use `llm.launch.py` for direct topic-level control
+
+This version of the launch file allows you to specify **raw topic names directly** (no bag playback or auto setup). Examples:
+
+#### This simulates mode:=mono as there no rgb_info provided.
+```shell
+ros2 launch llm_ros llm.launch.py \
+    rgb_image:=/your_camera/image_rect \
+    rerun:=true \
+    spatialLM:=true
+```
+
+#### This simulates mode:=mono+ as there no rgb_info provided.
+```shell
+ros2 launch llm_ros llm.launch.py \
+    rgb_image:=/your_camera/image_rect \
+    rgb_info:=/your_camera/camera_info \
+    rerun:=true \
+    spatialLM:=true
+```
+
+#### This simulates mode:=mono+ as there no rgb_info provided.
+```shell
+ros2 launch llm_ros llm.launch.py \
+    left_image:=/stereo/left/image_rect \
+    right_image:=/stereo/right/image_rect \
+    left_info:=/stereo/left/camera_info \
+    right_info:=/stereo/right/camera_info \
+    baseline:=0.12 \
+    rerun:=true \
+    spatialLM:=true
+```
+
+### 2️⃣ Parameter Descriptions
