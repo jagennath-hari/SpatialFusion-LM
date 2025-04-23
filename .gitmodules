@@ -1,0 +1,9 @@
+[submodule "docker/UniK3D"]
+	path = docker/UniK3D
+	url = https://github.com/jagennath-hari/UniK3D.git
+[submodule "spatialfusion-lm/FoundationStereo"]
+	path = spatialfusion-lm/FoundationStereo
+	url = https://github.com/NVlabs/FoundationStereo.git
+[submodule "spatialfusion-lm/SpatialLM"]
+	path = spatialfusion-lm/SpatialLM
+	url = https://github.com/manycore-research/SpatialLM.git
