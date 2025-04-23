@@ -39,6 +39,7 @@ SpatialFusion-LM has been tested on:
 - 🧊 **Environment:** Docker container with GPU support
 
 > Other modern Ubuntu + CUDA setups may work, but this is the validated reference configuration.
+
 > A GPU with ≥ 24 GB of VRAM is recommended to ensure stable real-time inference and efficient handling of high-resolution inputs across all components.
 
 ### 🧬 Clone the repository and its submodules
