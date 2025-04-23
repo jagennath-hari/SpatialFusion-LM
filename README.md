@@ -245,10 +245,13 @@ These are the outputs published by the core_node.py:
 
 ## ⚖️ Depth Comparison
 
-<table>
-  <tr>
-    <td align="center"><b>Mono</b><br><img src="media/mono.png" width="300"/></td>
-    <td align="center"><b>Mono+</b><br><img src="media/mono+.png" width="300"/></td>
-    <td align="center"><b>Stereo</b><br><img src="media/stereo.png" width="300"/></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="media/mono.png" width="45%" alt="Mono Depth"/>
+  <img src="media/mono+.png" width="45%" alt="Mono+ Depth"/>
+</p>
+<p align="center"><b>Mono</b> (left) vs <b>Mono+</b> (right)</p>
+
+<p align="center">
+  <img src="media/stereo.png" width="60%" alt="Stereo Depth"/>
+</p>
+<p align="center"><b>Stereo</b> (most accurate)</p>
