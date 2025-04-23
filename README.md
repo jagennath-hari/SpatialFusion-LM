@@ -21,7 +21,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 
 ## 🔧 Features
 
-- 📷 Supports monocular and stereo vision
+- 📷 Supports monocular, monocular+ and stereo vision
 - 🔍 Neural depth estimation with metric 3D reconstruction
 - 🧱 Differentiable point cloud generation in the camera frame
 - 🧠 Language-conditioned spatial layout prediction
@@ -79,7 +79,7 @@ ros2 launch llm_ros llm_demo.launch.py
   <em>SpatialFusion-LM performing stereo depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
-### 📸 Monocular Demo (RViz Only – Rerun Disabled)
+### 📸 Monocular+ Demo (RViz Only – Rerun Disabled)
 
 ```shell
 ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
