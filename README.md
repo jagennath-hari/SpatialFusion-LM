@@ -31,9 +31,23 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - 📊 Integrated logging via [Rerun](https://www.rerun.io/)
 
 ## ⚙️ Setup
-Clone the repository and its submodules
+### 🧬 Clone the repository and its submodules
 
 ```shell
 git clone --recursive https://github.com/jagennath-hari/SpatialFusion-LM.git
 cd SpatialFusion-LM
+```
+
+### 📥 Download the model (FoundationStereo and SpatialLM) weights
+
+```shell
+bash scripts/download_weights.sh
+```
+
+### 🗃️ Download datasets
+
+This script will prompt you to select one or more datasets:
+
+```shell
+bash scripts/download_dataset.sh
 ```
