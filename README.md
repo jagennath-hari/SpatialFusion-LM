@@ -15,7 +15,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 </div>
 
 <p align="center">
-  <img src="media/demo_mono_indoor_0.gif" alt="SpatialFusion-LM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <img src="media/demo_mono_indoor_0.gif" alt="SpatialFusion-LM Mono Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
@@ -67,3 +67,14 @@ The easiest way to launch SpatialFusion-LM is via Docker. The following command 
 ```shell
 bash run_container.sh
 ```
+
+## 🧪 Demo
+
+```shell
+bash run_container.sh
+```
+
+<p align="center">
+  <img src="media/demo_stereo_indoor_0.gif" alt="SpatialFusion-LM Stereo Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing stereo depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
+</p>
