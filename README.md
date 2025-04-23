@@ -137,6 +137,6 @@ ros2 launch llm_ros llm_demo.launch.py mode:=mono spatialLM:=false rerun:=true r
 ```
 
 <p align="center">
-  <img src="media/demo_mono_depth_indoor_0.gif" alt="SpatialFusion-LM Monocular Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
+  <img src="media/demo_mono_depth_indoor_0.gif" alt="SpatialFusion-LM Monocular Indoor Demo" style="max-width: 200%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing stereo monocular+ estimation and 3D reconstruction on indoor scene <code>indoor_0</code>.</em>
 </p>
