@@ -254,3 +254,9 @@ These are the outputs published by the core_node.py:
 
 Measured on a single NVIDIA RTX A6000 (48 GB VRAM) at 1920×1080 resolution.
 Input images are automatically resized to model-specific inference resolution, and values may vary depending on hardware, backend load, and ROS2 message overhead.
+
+| Mode    | Inference Time (ms) | Avg FPS | VRAM Used |
+|:-------:|:-------------------:|:-------:|:---------:|
+| Mono    | 169.6               | 5.85    | 4440 MiB  |
+| Mono+   | 126.1               | 7.87    | 4460 MiB  |
+| Stereo  | 292.5               | 3.35    | 2126 MiB  |

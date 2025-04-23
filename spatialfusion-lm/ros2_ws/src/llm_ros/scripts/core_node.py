@@ -13,6 +13,9 @@ from sensor_msgs.msg import Image
 from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Point, Pose, Quaternion, Vector3
 from scipy.spatial.transform import Rotation as R
+import time
+from collections import deque
+import subprocess
 
 import numpy as np
 import cv2
@@ -53,6 +56,9 @@ class CoreNode(Node):
         self.marker_pub = self.create_publisher(MarkerArray, "/spatialLM/boxes", 1)
         self.image_overlay_pub = self.create_publisher(Image, "/spatialLM/image", 1)
         self.bridge = CvBridge()
+
+        self.last_infer_time = None
+        self.fps_window = deque(maxlen=30)
 
         # PRIORITY 1: Stereo mode
         if all([self.left_image_topic, self.right_image_topic,
@@ -135,6 +141,7 @@ class CoreNode(Node):
             overlay_img = None
         if self.rerun_visualizer:
             self.rerun_visualizer.log_mono(image, intrinsics, points_3d, colors_rgb, depth_vis, floor_plan, overlay_img)
+        #self.log_performance("Mono", check_vram = False)
 
     def rgb_with_info_callback(self, rgb_msg, info_msg):
         image, intrinsics, depth_msg, depth_vis, points_3d, colors_rgb, cloud_msg = self.unik3d_wrapper.infer(self.bridge.imgmsg_to_cv2(rgb_msg, desired_encoding='bgr8'), intrinsics=np.array(info_msg.k, dtype=np.float64).reshape(3, 3))
@@ -157,6 +164,7 @@ class CoreNode(Node):
             overlay_img = None
         if self.rerun_visualizer:
             self.rerun_visualizer.log_mono(image, intrinsics, points_3d, colors_rgb, depth_vis, floor_plan, overlay_img)
+        #self.log_performance("Mono+", check_vram = False)
 
     def stereo_callback(self, left_img, right_img, left_info, right_info):
         left_image, left_info, right_image, right_info, depth_msg, disp_vis, points_3d, colors_rgb, cloud_msg = self.foundation_stereo_wrapper.infer(self.bridge.imgmsg_to_cv2(left_img, desired_encoding='bgr8'), self.bridge.imgmsg_to_cv2(right_img, desired_encoding='bgr8'), np.array(left_info.k, dtype=np.float64).reshape(3, 3), np.array(right_info.k, dtype=np.float64).reshape(3, 3))
@@ -178,6 +186,8 @@ class CoreNode(Node):
             overlay_img = None
         if self.rerun_visualizer:
             self.rerun_visualizer.log_stereo(left_image, right_image, left_info, disp_vis, points_3d, colors_rgb, self.baseline, floor_plan, overlay_img)
+        #self.log_performance("Stereo", check_vram = False)
+
 
     def publish_floorplan_markers(self, floor_plan, stamp):
         # Clear previous markers
@@ -346,7 +356,37 @@ class CoreNode(Node):
         msg.header.stamp = stamp
         msg.header.frame_id = frame_id
         return msg
+    
+    def log_performance(self, tag="", check_vram=False):
+        now = time.time()
+        if self.last_infer_time is not None:
+            dt = now - self.last_infer_time
+            self.fps_window.append(1.0 / dt)
+            avg_fps = sum(self.fps_window) / len(self.fps_window)
 
+            if check_vram:
+                try:
+                    result = subprocess.run(
+                        ['nvidia-smi', '--query-gpu=utilization.gpu,memory.used',
+                        '--format=csv,noheader,nounits', '-i', '0'],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.DEVNULL,
+                        check=True,
+                        text=True
+                    )
+                    gpu_util, mem_used = result.stdout.strip().split(', ')
+                    self.get_logger().info(
+                        f"[{tag}] Inference time: {dt*1000:.1f} ms | "
+                        f"Avg FPS: {avg_fps:.2f} | GPU: {gpu_util}% | VRAM: {mem_used} MiB"
+                    )
+                except Exception as e:
+                    self.get_logger().warn(f"[{tag}] Failed to query nvidia-smi: {e}")
+            else:
+                self.get_logger().info(
+                    f"[{tag}] Inference time: {dt*1000:.1f} ms | Avg FPS: {avg_fps:.2f}"
+                )
+
+        self.last_infer_time = now
 
 
 def main(args=None):
