@@ -99,5 +99,17 @@ The `llm_demo.launch.py` file accepts the following arguments:
 | `mode`       | string  | Input mode: `mono`, `mono+`, or `stereo`                                    | `stereo`             |
 | `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `True`               |
 | `rerun`      | bool    | Enable or disable logging to [Rerun](https://rerun.io)                      | `True`               |
-| `rviz`       | bool    | Enable or disable RViz2 visualization                                       | `True`               |
-| `bag_path`   | string  | Path to the ROS 2 bag file (e.g., `/datasets/indoor_0`)                     | `/datasets/indoor_0` |
+| `rviz`       | bool    | Enable or disable RVIZ visualization                                        | `True`               |
+| `bag_path`   | string  | Path to the ROS2 bag file (e.g., `/datasets/indoor_0`)                      | `/datasets/indoor_0` |
+
+### Mono, Mono+, Stereo?
+
+```text
+                  +-----------+
+                  |  mode=?   |
+                  +-----------+
+                    /   |    \
+                mono mono+ stereo
+                 |     |     |
+             no intr. intr+cam stereo pair
+```
