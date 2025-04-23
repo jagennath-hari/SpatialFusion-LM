@@ -106,20 +106,20 @@ The `llm_demo.launch.py` file accepts the following arguments:
 
 <p align="center">
 <pre>
-          +---------------------------------+
-          |              mode=?             |
-          +---------------------------------+
-                           |
-             ┌─────────────┴──────────────┐
-             │             │              │
-            mono          mono+        stereo
-             │             │              │
-            rgb           rgb          camera
-                          intr.         intr.
-                           +              +
-                          rgb          stereo
-                                        pair
-                                          +
-                                       baseline
+                                        +---------------------------------+
+                                        |              mode=?             |
+                                        +---------------------------------+
+                                                        |
+                                            ┌─────────────┴──────────────┐
+                                            │             │              │
+                                            mono          mono+        stereo
+                                            │             │              │
+                                            rgb           rgb          camera
+                                                        intr.         intr.
+                                                        +              +
+                                                        rgb          stereo
+                                                                        pair
+                                                                        +
+                                                                    baseline
 </pre>
 </p>
