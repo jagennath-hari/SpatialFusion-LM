@@ -105,21 +105,21 @@ The `llm_demo.launch.py` file accepts the following arguments:
 ### 📸 Mono, 📷 Mono+, 📷 📷 Stereo?
 
 <p align="center">
-
 <pre>
-       +-----------+
-       |  mode=?   |
-       +-----------+
-         /   |   \
-    mono  mono+  stereo
-     |      |       |
-    rgb   camera  camera
-           intr    intr
-            +       +
-           rgb    stereo
-                   pair
-                    +
-                  baseline   
+          ███████████████████████████████████
+          █              mode=?             █
+          ███████████████████████████████████
+                           |
+                  ┌────────┴────────┐
+                  │        │        │
+                 mono     mono+   stereo
+                  |        |        |
+                  │        │        │
+                 RGB      RGB     CAMERA
+                          INTR     INTR
+                           │        │
+                          RGB     STEREO
+                                    │
+                                 BASELINE
 </pre>
-
 </p>
