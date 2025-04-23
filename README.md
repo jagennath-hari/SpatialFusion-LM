@@ -247,5 +247,5 @@ These are the outputs published by the core_node.py:
 
 <p align="center">
   <img src="media/depth_comparison.gif" alt="Depth Comparison Loop" style="max-width: 100%; height: auto;"/><br/>
-  <em>Comparison of predicted depth maps from <code>stereo</code>, <code>mono+</code>, and <code>mono</code> modes.</em>
+  <em>Comparison of predicted depth maps from <code>stereo</code>, <code>mono+</code>, and <code>mono</code> modes respectively.</em>
 </p>
