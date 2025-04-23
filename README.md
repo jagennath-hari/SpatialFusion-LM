@@ -97,9 +97,9 @@ The `llm_demo.launch.py` file accepts the following arguments:
 |   Argument   |  Type   |                               Description                                   |       Default        |
 |:-------------|:-------:|:---------------------------------------------------------------------------:|---------------------:|
 | `mode`       | string  | Input mode: `mono`, `mono+`, or `stereo`                                    | `stereo`             |
-| `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `True`               |
-| `rerun`      | bool    | Enable or disable logging to [Rerun](https://rerun.io)                      | `True`               |
-| `rviz`       | bool    | Enable or disable RVIZ visualization                                        | `True`               |
+| `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `true`               |
+| `rerun`      | bool    | Enable or disable logging to [Rerun](https://rerun.io)                      | `true`               |
+| `rviz`       | bool    | Enable or disable RVIZ visualization                                        | `true`               |
 | `bag_path`   | string  | Path to the ROS2 bag file (e.g., `/datasets/indoor_0`)                      | `/datasets/indoor_0` |
 
 ### 📸 Mono, 📷 Mono+, 📷 📷 Stereo?
@@ -195,15 +195,15 @@ ros2 launch llm_ros llm.launch.py -s
 ```
 |Parameter | Description | Default | ROS Msg Type |
 |:----------|:-----------:|:-------:|--------------:|
-|rgb_image | RGB image topic | '' | sensor_msgs/msg/Image |
-|rgb_info | RGB camera info topic | '' | sensor_msgs/msg/CameraInfo |
-|left_image | Left stereo image topic | '' | sensor_msgs/msg/Image |
-|right_image | Right stereo image topic | '' | sensor_msgs/msg/Image |
-|left_info | Left camera info topic | '' | sensor_msgs/msg/CameraInfo |
-|right_info | Right camera info topic | '' | sensor_msgs/msg/CameraInfo |
-|baseline | Stereo camera baseline (in meters) | 0.0 | float (launch param) |
-|rerun | Enable Rerun logging | true | bool (launch param) |
-|spatialLM | Enable 3D layout prediction via SpatialLM | true | bool (launch param) |
+|`rgb_image` | RGB image topic | '' | `sensor_msgs/msg/Image` |
+|`rgb_info` | RGB camera info topic | '' | `sensor_msgs/msg/CameraInfo` |
+|`left_image` | Left stereo image topic | '' | `sensor_msgs/msg/Image` |
+|`right_image` | Right stereo image topic | '' | `sensor_msgs/msg/Image` |
+|`left_info` | Left camera info topic | '' | `sensor_msgs/msg/CameraInfo` |
+|`right_info` | Right camera info topic | '' | `sensor_msgs/msg/CameraInfo` |
+|`baseline` | Stereo camera baseline (in meters) | `0.0` | `float` (launch param) |
+|`rerun` | Enable Rerun logging | `true` | `bool` (launch param) |
+|`spatialLM` | Enable 3D layout prediction via SpatialLM | `true` | `bool` (launch param) |
 
 
 ### 📤 Output Topics
@@ -212,8 +212,8 @@ These are the outputs published by the core_node.py:
 
 |Topic|Description|ROS Msg Type|
 |:----|:---------:|-----------:|
-|/spatialLM/depth|	Predicted depth map (1-channel float)|	sensor_msgs/msg/Image|
-|/spatialLM/cloud|	Reconstructed 3D point cloud|	sensor_msgs/msg/PointCloud2|
-|/spatialLM/image|	RGB image with projected 3D layout|	sensor_msgs/msg/Image|
-|/spatialLM/boxes|	Predicted 3D layout objects (e.g., boxes)|	visualization_msgs/msg/MarkerArray|
-|/tf|	Transform tree| (e.g., map → camera)|	tf2_msgs/msg/TFMessage|
+|`/spatialLM/depth`|	Predicted depth map (1-channel float)|	`sensor_msgs/msg/Image`|
+|`/spatialLM/cloud`|	Reconstructed 3D point cloud|	`sensor_msgs/msg/PointCloud2`|
+|`/spatialLM/image`|	RGB image with projected 3D layout|	`sensor_msgs/msg/Image`|
+|`/spatialLM/boxes`|	Predicted 3D layout objects (e.g., boxes)|	`visualization_msgs/msg/MarkerArray`|
+|`/tf`|	Transform tree| (e.g., map → camera)|	`tf2_msgs/msg/TFMessage`|
