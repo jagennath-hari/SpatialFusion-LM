@@ -102,7 +102,7 @@ The `llm_demo.launch.py` file accepts the following arguments:
 | `rviz`       | bool    | Enable or disable RVIZ visualization                                        | `True`               |
 | `bag_path`   | string  | Path to the ROS2 bag file (e.g., `/datasets/indoor_0`)                      | `/datasets/indoor_0` |
 
-### Mono, Mono+, Stereo?
+### 📸 Mono, 📷 Mono+, 📷 📷 Stereo?
 
 ```text
                   +-----------+
