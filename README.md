@@ -23,8 +23,8 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 
 - 📷 Supports monocular and stereo vision
 - 🔍 Neural depth estimation with metric 3D reconstruction
-- 🧠 Language-conditioned spatial layout prediction
 - 🧱 Differentiable point cloud generation in the camera frame
+- 🧠 Language-conditioned spatial layout prediction
 - 🧩 Modular ROS2 architecture (plug-and-play components)
 - 🌀 Real-time inference and visualization
 - 📊 Integrated logging via [Rerun](https://www.rerun.io/)
