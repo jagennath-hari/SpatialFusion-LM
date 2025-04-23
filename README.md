@@ -244,3 +244,11 @@ These are the outputs published by the core_node.py:
 |`/tf`|	Transform tree| (e.g., map → camera)|	`tf2_msgs/msg/TFMessage`|
 
 ## ⚖️ Depth Comparison
+
+<table>
+  <tr>
+    <td align="center"><b>Mono</b><br><img src="media/mono.png" width="300"/></td>
+    <td align="center"><b>Mono+</b><br><img src="media/mono+.png" width="300"/></td>
+    <td align="center"><b>Stereo</b><br><img src="media/stereo.png" width="300"/></td>
+  </tr>
+</table>
