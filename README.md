@@ -31,6 +31,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 
 ## ✅ TODO
 
+- [ ] Create end-to-end inference using [**Triton Inference Server**](https://github.com/triton-inference-server) via ensemble models
 - [ ] Quantize [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) and [**FoundationStereo**](https://nvlabs.github.io/FoundationStereo/) to [**TensorRT**](https://github.com/NVIDIA/TensorRT) engines
 - [ ] Fix [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) CUDA Memeory stream for async error while running [**SpatialLM**](https://manycore-research.github.io/SpatialLM/) in parallel
 - [ ] Expand evaluation to TUM, Replica, and NYUv2 datasets with one more custom recorded dataset
