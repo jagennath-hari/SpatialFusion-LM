@@ -246,12 +246,6 @@ These are the outputs published by the core_node.py:
 ## ⚖️ Depth Comparison
 
 <p align="center">
-  <img src="media/mono.png" width="45%" alt="Mono Depth"/>
-  <img src="media/mono+.png" width="45%" alt="Mono+ Depth"/>
+  <img src="media/depth_comparison.gif" alt="Depth Comparison Loop" style="max-width: 100%; height: auto;"/><br/>
+  <em>Comparison of predicted depth maps from <code>stereo</code>, <code>mono+</code>, and <code>mono</code> modes.</em>
 </p>
-<p align="center"><b>Mono</b> (left) vs <b>Mono+</b> (right)</p>
-
-<p align="center">
-  <img src="media/stereo.png" width="60%" alt="Stereo Depth"/>
-</p>
-<p align="center"><b>Stereo</b> (most accurate)</p>
