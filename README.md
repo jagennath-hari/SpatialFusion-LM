@@ -34,7 +34,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 SpatialFusion-LM has been tested on:
 
 - 🐧 **Ubuntu:** 24.04  
-- 🧠 **GPU:** NVIDIA RTX A6000  
+- 🧠 **GPU:** 2x NVIDIA RTX A6000  
 - ⚙️ **CUDA:** 12.8  
 - 🧊 **Environment:** Docker container with GPU support
 
