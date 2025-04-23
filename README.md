@@ -29,3 +29,8 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - 🌀 Real-time inference and visualization
 - 🗂 Dataset-agnostic with built-in support for indoor scenes
 - 📊 Integrated logging via [Rerun](https://www.rerun.io/)
+
+## ⚙️ Setup
+Clone the repository and its submodules
+```git clone --recurse-submodules https://github.com/jagennath-hari/SpatialFusion-LM.git```
+```cd SpatialFusion-LM```
