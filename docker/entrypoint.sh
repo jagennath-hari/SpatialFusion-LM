@@ -15,6 +15,6 @@ if [ ! -f /ros2_ws/install/setup.bash ]; then
 fi
 
 # Source your ROS 2 workspace
-source /ros2_ws/install/setup.bash
+source /ros2_ws/install/local_setup.bash
 
 exec "$@"
