@@ -79,7 +79,7 @@ ros2 launch llm_ros llm_demo.launch.py
   <em>SpatialFusion-LM performing stereo depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
-### Monocular Demo Without Rerun Only RVIZ
+### 📸 Monocular Demo Without Rerun Only RVIZ
 
 ```shell
 ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
