@@ -126,16 +126,16 @@ The `llm_demo.launch.py` file accepts the following arguments:
 
 #### 🤖 Mode Descriptions
 
-- **`mono`** – Only an RGB image is provided  
+* **`mono`** – Only an RGB image is provided  
   [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) internally estimates camera intrinsics and uses them to predict **metric (absolute) depth**.  
   While this enables 3D reconstruction without calibration, the accuracy depends on the quality of intrinsic estimation.  
   🚀 Suitable for quick deployment or uncalibrated cameras.
 
-- **`mono+`** – RGB image **and** accurate camera intrinsics are provided  
+* **`mono+`** – RGB image **and** accurate camera intrinsics are provided  
   [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) uses the supplied intrinsics to produce **more accurate metric depth**, with better scale alignment.  
   🧪 Ideal for calibrated cameras (e.g., using `/camera_info`).
 
-- **`stereo`** – Left and right **rectified images**, intrinsics, and baseline are required  
+* **`stereo`** – Left and right **rectified images**, intrinsics, and baseline are required  
   [**FoundationStereo**](https://nvlabs.github.io/FoundationStereo/) performs dense stereo matching to compute **high-precision, metric depth** via triangulation.  
   🛡️ This mode is the most **robust and accurate**, especially in real-world or textured environments.
 
