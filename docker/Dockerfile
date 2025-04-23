@@ -61,6 +61,13 @@ RUN apt update && apt install -y \
     ros-${ROS_DISTRO}-pcl-ros \
     libflann-dev
 
+# Copy UniK3D and install it
+COPY ./UniK3D /UniK3D
+RUN pip3 install -e /UniK3D
+
+# Download UniK3D model into HuggingFace cache
+RUN python3 -c "from unik3d.models import UniK3D; UniK3D.from_pretrained('lpiccinelli/unik3d-vitl')"
+
 ARG USERNAME=rosuser
 ARG UID=1000
 ARG GID=1000

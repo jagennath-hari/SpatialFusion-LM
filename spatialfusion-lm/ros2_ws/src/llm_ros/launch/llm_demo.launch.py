@@ -49,7 +49,7 @@ def setup_mode_and_bag(context, *args, **kwargs):
 
 
 def generate_launch_description():
-    default_bag_path = '/dataset'
+    default_bag_path = '/dataset/indoor_0'
     default_rviz_config = '/ros2_ws/src/llm_ros/config/llm.rviz'
 
     return LaunchDescription([

@@ -17,15 +17,4 @@ fi
 # Source your ROS 2 workspace
 source /ros2_ws/install/setup.bash
 
-# Ensure editable install of UniK3D every time container starts
-if [ -d "/UniK3D" ]; then
-    pip3 install -e /UniK3D 
-fi
-
-# Pre-download UniK3D model
-echo "📦 Checking UniK3D model..."
-python3 -c "from unik3d.models import UniK3D; UniK3D.from_pretrained('lpiccinelli/unik3d-vitl')" || {
-  echo "❌ Failed to download UniK3D model. Please check internet connection or model ID."
-}
-
 exec "$@"
