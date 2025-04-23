@@ -169,7 +169,7 @@ ros2 launch llm_ros llm_demo.launch.py mode:=mono spatialLM:=false rerun:=true r
 ### 📷 📷 Stereo 🧠 SpatialLM Disabled (mono, rerun)
 
 ```shell
-ros2 launch llm_ros llm_demo.launch.py mode:=mono spatialLM:=false rerun:=true rviz:=false
+ros2 launch llm_ros llm_demo.launch.py mode:=stereo spatialLM:=false rerun:=true rviz:=false
 ```
 
 <p align="center">
@@ -185,7 +185,7 @@ To run SpatialFusion-LM on a live ROS2 system or your own dataset:
 
 This version of the launch file allows you to specify **raw topic names directly** (no bag playback or auto setup). Examples:
 
-#### This simulates mode:=mono as there no rgb_info provided.
+#### This simulates mode:=mono as there is no rgb_info provided.
 ```shell
 ros2 launch llm_ros llm.launch.py \
   rgb_image:=/your_camera/image_rect \
@@ -193,7 +193,7 @@ ros2 launch llm_ros llm.launch.py \
   spatialLM:=true
 ```
 
-#### This simulates mode:=mono+ as rgb_info provided.
+#### This simulates mode:=mono+ as rgb_info is provided.
 ```shell
 ros2 launch llm_ros llm.launch.py \
   rgb_image:=/your_camera/image_rect \
@@ -202,7 +202,7 @@ ros2 launch llm_ros llm.launch.py \
   spatialLM:=true
 ```
 
-#### This simulates mode:=stereo as there left and right topics, left_info and right_info, and baseline provided.
+#### This simulates mode:=stereo as left and right topics, left_info and right_info, and baseline are provided.
 ```shell
 ros2 launch llm_ros llm.launch.py \
   left_image:=/stereo/left/image_rect \
@@ -263,11 +263,11 @@ Input images are automatically resized to model-specific inference resolution, a
   <img src="media/vram_usage.png" alt="VRAM Usage" width="30%" style="margin-left:10px;">
 </p>
 
-| Mode    | Inference Time (ms) | Avg FPS | VRAM Used |
-|:-------:|:-------------------:|:-------:|:---------:|
-| Mono    | 169.6               | 5.85    | 4440 MiB  |
-| Mono+   | 126.1               | 7.87    | 4460 MiB  |
-| Stereo  | 292.5               | 3.35    | 2126 MiB  |
+| Mode    | Inference Time (ms) | Avg FPS | VRAM Used | Backbone |
+|:-------:|:-------------------:|:-------:|:---------:|:--------:|
+| Mono    | 169.6               | 5.85    | 4440 MiB  | UniK3D (ViT-L) |
+| Mono+   | 126.1               | 7.87    | 4460 MiB  | UniK3D (ViT-L) |
+| Stereo  | 292.5               | 3.35    | 2126 MiB  | FoundationStereo (ViT-S) |
 
 ## 🤝 Contributing
 
