@@ -104,12 +104,20 @@ The `llm_demo.launch.py` file accepts the following arguments:
 
 ### 📸 Mono, 📷 Mono+, 📷 📷 Stereo?
 
-```text
-                  +-----------+
-                  |  mode=?   |
-                  +-----------+
-                    /   |    \
-                mono mono+ stereo
-                 |     |     |
-             no intr. intr+cam stereo pair
-```
+<p align="center">
+<pre>
+       +-----------+
+       |  mode=?   |
+       +-----------+
+         /   |   \
+    mono  mono+  stereo
+     |      |       |
+    rgb   camera  camera
+           intr    intr
+            +       +
+           rgb    stereo
+                   pair
+                    +
+                  baseline   
+</pre>
+</p>
