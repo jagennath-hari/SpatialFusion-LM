@@ -95,7 +95,7 @@ ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
 The `llm_demo.launch.py` file accepts the following arguments:
 
 |   Argument   |  Type   |                               Description                                   |       Default        |
-|:-------------|:-------:|:---------------------------------------------------------------------------:|:--------------------:|
+|:-------------|:-------:|:---------------------------------------------------------------------------:|---------------------:|
 | `mode`       | string  | Input mode: `mono`, `mono+`, or `stereo`                                    | `stereo`             |
 | `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `True`               |
 | `rerun`      | bool    | Enable or disable logging to [Rerun](https://rerun.io)                      | `True`               |
