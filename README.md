@@ -126,7 +126,7 @@ The `llm_demo.launch.py` file accepts the following arguments:
 
 #### 🤖 Mode Descriptions
 
-* **`mono`** – Only an RGB image is provided.  
+* **`mono`** – Only RGB image is provided.  
   [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) internally estimates camera intrinsics and uses them to predict **metric (absolute) depth**.  
   While this enables 3D reconstruction without calibration, the accuracy depends on the quality of intrinsic estimation.  
   🚀 Suitable for quick deployment or uncalibrated cameras.
