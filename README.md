@@ -177,6 +177,20 @@ ros2 launch llm_ros llm_demo.launch.py mode:=stereo spatialLM:=false rerun:=true
   <em>SpatialFusion-LM performing stereo estimation and 3D reconstruction on indoor scene <code>indoor_0</code>.</em>
 </p>
 
+### 🧪 Run with TUM Dataset
+
+SpatialFusion-LM supports pre-recorded ROS2 bags from the TUM RGB-D dataset. The `tum.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
+
+```shell
+ros2 launch llm_ros tum.launch.py \
+  mode:=mono+ \
+  bag_path:=/datasets/tum_desk \
+  spatialLM:=true \
+  rerun:=true \
+  rviz:=true
+```
+>  This assumes you have already downloaded the ROS2 TUM dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
+
 ## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
 
 To run SpatialFusion-LM on a live ROS2 system or your own dataset:
