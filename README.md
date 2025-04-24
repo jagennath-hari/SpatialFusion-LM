@@ -196,6 +196,12 @@ ros2 launch llm_ros llm_demo_tum.launch.py \
   <em>SpatialFusion-LM performing monocular+ estimation, 3D reconstruction, and spatial layout prediction on TUM scene <code>office</code>.</em>
 </p>
 
+
+<p align="center">
+  <img src="media/demo_mono_depth_tum_desk.gif" alt="SpatialFusion-LM Mono+ TUM desk Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing monocular estimation and 3D reconstruction on TUM scene <code>desk</code>.</em>
+</p>
+
 ## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
 
 To run SpatialFusion-LM on a live ROS2 system or your own dataset:
