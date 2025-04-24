@@ -182,7 +182,7 @@ ros2 launch llm_ros llm_demo.launch.py mode:=stereo spatialLM:=false rerun:=true
 SpatialFusion-LM supports pre-recorded ROS2 bags from the TUM RGB-D dataset. The `tum.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
 
 ```shell
-ros2 launch llm_ros tum.launch.py \
+ros2 launch llm_ros llm_demo_tum.launch.py \
   mode:=mono+ \
   bag_path:=/datasets/tum_desk \
   spatialLM:=true \
