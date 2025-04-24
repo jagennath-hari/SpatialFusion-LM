@@ -19,10 +19,10 @@ FILES=(
 for entry in "${FILES[@]}"; do
     read -r url filename <<< "$entry"
     echo "⬇️ Downloading ${filename}..."
-    wget -q --show-progress -O "${TARGET_DIR}/${filename}" "$url"
+    wget -c --tries=100 --timeout=30 --show-progress -O "${TARGET_DIR}/${filename}" "$url"
 done
 
-echo "✅ All weights downloaded to '${TARGET_DIR}'!"
+echo "✅ All FoundationStereo weights downloaded to '${TARGET_DIR}'!"
 
 # ---------------------
 # SpatialLM Setup
@@ -43,7 +43,6 @@ fi
 # Ensure parent directory exists
 mkdir -p "$SPATIALLM_PARENT"
 
-
 if [ ! -d "$SPATIALLM_DIR" ]; then
     echo "⬇️ Cloning SpatialLM repo (LFS smudge skipped)..."
     GIT_LFS_SKIP_SMUDGE=1 git clone https://huggingface.co/manycore-research/SpatialLM-Llama-1B "$SPATIALLM_DIR"
@@ -53,7 +52,7 @@ if [ ! -d "$SPATIALLM_DIR" ]; then
 
     # Fetch all LFS objects and check them out
     git lfs pull
-    git lfs checkout  # Ensures working tree gets the files
+    git lfs checkout
 
     cd - > /dev/null
 else

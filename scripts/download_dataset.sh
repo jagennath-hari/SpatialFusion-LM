@@ -27,14 +27,14 @@ for i in "${INDICES[@]}"; do
 
     echo "⬇️  Downloading manifest for ${DATASET}..."
     mkdir -p "$LOCAL_PATH"
-    wget -q -O "$LOCAL_PATH/manifest.txt" "$MANIFEST_URL"
+    wget -c --tries=100 --timeout=30 -q -O "$LOCAL_PATH/manifest.txt" "$MANIFEST_URL"
 
     echo "📄 Found files:"
     cat "$LOCAL_PATH/manifest.txt"
 
     echo "⬇️  Downloading files..."
     while read -r filename; do
-        wget -q --show-progress \
+        wget -c --tries=100 --timeout=30 --show-progress \
           -O "${LOCAL_PATH}/${filename}" \
           "${BASE_URL}/${DATASET}/${filename}"
     done < "$LOCAL_PATH/manifest.txt"
