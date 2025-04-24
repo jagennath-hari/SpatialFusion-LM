@@ -184,7 +184,7 @@ SpatialFusion-LM supports pre-recorded ROS2 bags from the TUM RGB-D dataset. The
 ```shell
 ros2 launch llm_ros llm_demo_tum.launch.py \
   mode:=mono+ \
-  bag_path:=/datasets/tum_desk \
+  bag_path:=/datasets/tum_office \
   spatialLM:=true \
   rerun:=true \
   rviz:=true
