@@ -31,6 +31,11 @@ class RerunVisualizer:
 
         rr.log(f"{frame}/rgb/depth", rr.Image(depth_map))
 
+        rr.log(f"{frame}/cloud", rr.Transform3D(
+            translation=[0.0, 0.0, 0.0],
+            rotation=rr.Quaternion(xyzw=[0.0, 0.0, 0.0, 1.0])
+        ))
+
         rr.log(f"{frame}/cloud", rr.Points3D(positions=points_3d, colors=colors_rgb))
 
         if floor_plan is not None:
@@ -95,6 +100,11 @@ class RerunVisualizer:
             principal_point=[cx, cy],
         ))
         rr.log(f"{frame}/right/image", rr.Image(right_rgb))
+
+        rr.log(f"{frame}/cloud", rr.Transform3D(
+            translation=[0.0, 0.0, 0.0],
+            rotation=rr.Quaternion(xyzw=[0.0, 0.0, 0.0, 1.0])
+        ))
 
         # Log point cloud
         rr.log(f"{frame}/cloud", rr.Points3D(positions=points, colors=colors))

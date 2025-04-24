@@ -3,7 +3,7 @@ set -e
 
 BASE_URL="https://spatialfusionlm.s3.amazonaws.com/datasets"
 TARGET_DIR="datasets"
-DATASET_LIST=("indoor_0")
+DATASET_LIST=("indoor_0" "tum_desk" "tum_office" "tum_xyz")
 
 echo "📦 Available datasets:"
 for i in "${!DATASET_LIST[@]}"; do

@@ -126,10 +126,10 @@ The `llm_demo.launch.py` file accepts the following arguments:
   rgb           rgb          camera
                 intr.         intr.
                 +              +
-                rgb           stereo
+                rgb          stereo
                               pair
                                 +
-                            baseline
+                             baseline
 </pre>
 </p>
 
