@@ -191,6 +191,11 @@ ros2 launch llm_ros llm_demo_tum.launch.py \
 ```
 >  This assumes you have already downloaded the ROS2 TUM dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
 
+<p align="center">
+  <img src="media/demo_mono+_tum_office.gif" alt="SpatialFusion-LM Mono+ TUM office Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing monocular+ estimation, 3D reconstruction, and spatial layout prediction on TUM scene <code>office</code>.</em>
+</p>
+
 ## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
 
 To run SpatialFusion-LM on a live ROS2 system or your own dataset:
