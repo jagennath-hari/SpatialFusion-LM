@@ -77,7 +77,7 @@ The easiest way to launch SpatialFusion-LM is via Docker. The following command 
 bash run_container.sh
 ```
 
-## 🧪 Demo
+## 🧪 Quick Demo
 
 ```shell
 ros2 launch llm_ros llm_demo.launch.py
