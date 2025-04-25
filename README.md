@@ -351,6 +351,8 @@ Input images are automatically resized to model-specific inference resolution, a
 | Mono+   | 126.1               | 7.87    | 4460 MiB  | UniK3D (ViT-L) |
 | Stereo  | 292.5               | 3.35    | 2126 MiB  | FoundationStereo (ViT-S) |
 
+> A signficant VRAM of ~8192 MiB is needed spatialLM:=true.
+
 ## 🤝 Contributing
 
 I welcome pull requests and suggestions! If you want to add a new dataset, model backend, or visualization utility, open an issue or fork this repo!
