@@ -15,6 +15,11 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 </div>
 
 <p align="center">
+  <img src="media/demo_mono_replica_office3.gif" alt="SpatialFusion-LM Monocular LLM Replica office3 Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on Replica scene <code>office3</code>.</em>
+</p>
+
+<p align="center">
   <img src="media/demo_mono_indoor_0.gif" alt="SpatialFusion-LM Monocular LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
 </p>
