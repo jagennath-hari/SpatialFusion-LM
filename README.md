@@ -197,14 +197,18 @@ ros2 launch llm_ros llm_demo_tum.launch.py \
 >  This assumes you have already downloaded the ROS2 TUM dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
 
 <p align="center">
-  <img src="media/demo_mono+_tum_office.gif" alt="SpatialFusion-LM Mono+ TUM office Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing monocular+ estimation, 3D reconstruction, and spatial layout prediction on TUM scene <code>office</code>.</em>
-</p>
-
-
-<p align="center">
-  <img src="media/demo_mono_depth_tum_desk.gif" alt="SpatialFusion-LM Mono+ TUM desk Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing monocular estimation and 3D reconstruction on TUM scene <code>desk</code>.</em>
+  <table style="width: 100%;">
+    <tr>
+      <td align="center" style="width: 50%;">
+        <img src="media/demo_mono+_tum_office.gif" alt="TUM office Demo" style="height: 400px; object-fit: cover;"/><br/>
+        <em>TUM scene <code>office</code> (Mono+)</em>
+      </td>
+      <td align="center" style="width: 50%;">
+        <img src="media/demo_mono_depth_tum_desk.gif" alt="TUM desk Demo" style="height: 400px; object-fit: cover;"/><br/>
+        <em>TUM scene <code>desk</code> (Mono)</em>
+      </td>
+    </tr>
+  </table>
 </p>
 
 ### 🧪 Run with Replica Dataset
@@ -222,14 +226,18 @@ ros2 launch llm_ros llm_demo_replica.launch.py \
 >  This assumes you have already downloaded the ROS2 Replica dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
 
 <p align="center">
-  <img src="media/demo_mono+_replica_office2.gif" alt="SpatialFusion-LM Mono+ Replica office2 Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing monocular+ estimation, 3D reconstruction, and spatial layout prediction on Replica scene <code>office2</code>.</em>
-</p>
-
-
-<p align="center">
-  <img src="media/demo_mono_replica_room0.gif" alt="SpatialFusion-LM Mono Replica room0 Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing monocular estimation and 3D reconstruction on Replica scene <code>room0</code>.</em>
+  <table style="width: 100%;">
+    <tr>
+      <td align="center" style="width: 50%;">
+        <img src="media/demo_mono+_replica_office2.gif" alt="Replica office2 Demo" style="height: 400px; object-fit: cover;"/><br/>
+        <em>Replica scene <code>office2</code> (Mono+)</em>
+      </td>
+      <td align="center" style="width: 50%;">
+        <img src="media/demo_mono_replica_room0.gif" alt="Replica room0 Demo" style="height: 400px; object-fit: cover;"/><br/>
+        <em>Replica scene <code>room0</code> (Mono)</em>
+      </td>
+    </tr>
+  </table>
 </p>
 
 ## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
