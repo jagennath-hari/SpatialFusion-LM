@@ -27,6 +27,17 @@ SpatialFusion-LM is a unified framework for spatial 3D scene understanding from 
 
 
 # 🚀 Quick Start
+## 🖥️ Tested Configuration
+SpatialFusion-LM has been tested on:
+
+- 🐧 **Ubuntu:** 24.04  
+- 🧠 **GPU:** NVIDIA RTX A6000  
+- ⚙️ **CUDA:** 12.8  
+- 🧊 **Environment:** Docker container with GPU support
+
+> Other modern Ubuntu + CUDA setups may work, but this is the validated reference configuration.
+
+> A GPU with ≥ 24 GB of VRAM is recommended to ensure stable real-time inference and efficient handling of high-resolution inputs across all components.
 
 1. Clone the repo
 
@@ -85,20 +96,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - [ ] Fix [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) CUDA Memeory stream for async error while running [**SpatialLM**](https://manycore-research.github.io/SpatialLM/) in parallel
 - [x] **(2025-04-24)** Expand evaluation to TUM, Replica, and with one custom recorded dataset
 
-## ⚙️ Setup
-### 🖥️ Tested Configuration
-SpatialFusion-LM has been tested on:
-
-- 🐧 **Ubuntu:** 24.04  
-- 🧠 **GPU:** NVIDIA RTX A6000  
-- ⚙️ **CUDA:** 12.8  
-- 🧊 **Environment:** Docker container with GPU support
-
-> Other modern Ubuntu + CUDA setups may work, but this is the validated reference configuration.
-
-> A GPU with ≥ 24 GB of VRAM is recommended to ensure stable real-time inference and efficient handling of high-resolution inputs across all components.
-
-### 🗃️ Download datasets
+## 🗃️ Download TUM and Replica ROS2 datasets
 
 This script will prompt you to select one or more datasets to download:
 
