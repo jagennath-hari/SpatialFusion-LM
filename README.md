@@ -11,6 +11,15 @@ SpatialFusion-LM is a unified framework for spatial 3D scene understanding from 
 </div>
 
 <p align="center">
+  <a href="https://github.com/jagennath-hari/SpatialFusion-LM">
+    <img src="https://img.shields.io/badge/ROS2-Humble-blue" alt="ROS2">
+    <img src="https://img.shields.io/badge/Depth-UniK3D%20%7C%20FoundationStereo-yellow" alt="Depth Estimation">
+    <img src="https://img.shields.io/badge/LLM-SpatialLM-purple" alt="SpatialLM">
+    <img src="https://img.shields.io/badge/Logging%20%7C%20Visualization-Rerun-orange" alt="Rerun">
+  </a>
+</p>
+
+<p align="center">
   <table style="width: 100%;">
     <tr>
       <td align="center" style="width: 50%;">
