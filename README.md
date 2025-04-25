@@ -6,6 +6,60 @@
 
 <div align="justify">
 
+SpatialFusion-LM is a unified framework for spatial 3D scene understanding from monocular or stereo RGB input. It integrates depth estimation, differentiable 3D reconstruction, and spatial layout prediction using large language models.
+
+</div>
+
+<p align="center">
+  <table style="width: 100%;">
+    <tr>
+      <td align="center" style="width: 50%;">
+        <img src="media/demo_mono_replica_office3.gif" alt="Replica office3 Demo" style="height: 400px; object-fit: cover;"/><br/>
+        <em>Replica scene <code>office3</code></em>
+      </td>
+      <td align="center" style="width: 50%;">
+        <img src="media/demo_mono+_tum_office.gif" alt="TUM office Demo" style="height: 400px; object-fit: cover;"/><br/>
+        <em>TUM scene <code>office</code></em>
+      </td>
+    </tr>
+  </table>
+</p>
+
+
+# 🚀 Quick Start
+
+1. Clone the repo
+
+```shell
+git clone --recursive https://github.com/jagennath-hari/SpatialFusion-LM.git && cd SpatialFusion-LM
+```
+
+2. Download model weights and sample dataset
+
+```shell
+bash scripts/download_weights.sh && bash scripts/download_sample.sh
+```
+
+3. Run the demo inside Docker
+```shell
+bash run_container.sh
+ros2 launch llm_ros llm_demo.launch.py
+```
+
+> Change modes using mode:=mono/mono+/stereo
+
+## 🎮 Supported Modes
+
+|   Mode   |  Input   |       Depth Estimator               |       Use Case        |
+|:-------------|:-------:|:---------------------------------------------------------------------------:|---------------------:|
+| `mono`       | RGB Only  | UniK3D (ViT-L)     | Uncalibrated monocular          |
+| `mono+`  | RGB + camera intrinsics    | UniK3D (ViT-L)   | Calibrated monocular              |
+| `stereo`      | Rectified left + right + intrinsics + baseline    | FoundationStereo (ViT-S)              | Accurate stereo depth        |
+
+## 📖 Overview
+
+<div align="justify">
+
 SpatialFusion-LM is a unified framework for spatially grounded 3D scene understanding from monocular or stereo RGB input. It integrates learning-based depth estimation, differentiable point cloud reconstruction, and spatial language modeling into a modular ROS 2 pipeline. By combining geometric cues with linguistic priors, the system generates object-centric 3D layouts that support semantic reasoning, embodied navigation, and robot perception in real-world environments.
 
 The architecture decouples 3D scene inference into three core stages: (1) neural depth prediction, (2) back-projection and point cloud generation, and (3) spatial layout prediction via large-scale language models trained for 3D relational reasoning. Notably, the spatial reasoning is performed over instantaneous point clouds reconstructed in the local camera frame, rather than accumulated global maps, enabling frame-wise layout estimation in dynamic or unstructured environments.
@@ -13,16 +67,6 @@ The architecture decouples 3D scene inference into three core stages: (1) neural
 SpatialFusion-LM supports real-time inference, dataset extensibility, and structured logging through Rerun and ROS2, making it suitable for research in vision-language grounding, scene reconstruction, and robotics.
 
 </div>
-
-<p align="center">
-  <img src="media/demo_mono_replica_office3.gif" alt="SpatialFusion-LM Monocular LLM Replica office3 Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on Replica scene <code>office3</code>.</em>
-</p>
-
-<p align="center">
-  <img src="media/demo_mono_indoor_0.gif" alt="SpatialFusion-LM Monocular LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing monocular depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
-</p>
 
 ## 🔧 Features
 
@@ -54,18 +98,6 @@ SpatialFusion-LM has been tested on:
 
 > A GPU with ≥ 24 GB of VRAM is recommended to ensure stable real-time inference and efficient handling of high-resolution inputs across all components.
 
-### 🧬 Clone the repository and its submodules
-
-```shell
-git clone --recursive https://github.com/jagennath-hari/SpatialFusion-LM.git && cd SpatialFusion-LM
-```
-
-### 📥 Download the model (FoundationStereo and SpatialLM) weights
-
-```shell
-bash scripts/download_weights.sh
-```
-
 ### 🗃️ Download datasets
 
 This script will prompt you to select one or more datasets to download:
@@ -73,36 +105,6 @@ This script will prompt you to select one or more datasets to download:
 ```shell
 bash scripts/download_dataset.sh
 ```
-
-## 🐳 Run in Docker
-
-The easiest way to launch SpatialFusion-LM is via Docker. The following command will automatically build the image (if needed) and run the container with full GPU and ROS2 support:
-
-```shell
-bash run_container.sh
-```
-
-## 🧪 Quick Demo
-
-```shell
-ros2 launch llm_ros llm_demo.launch.py
-```
-
-<p align="center">
-  <img src="media/demo_stereo_indoor_0.gif" alt="SpatialFusion-LM Stereo LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing stereo depth estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
-</p>
-
-### 📷 Monocular+ Demo (RViz Only – Rerun Disabled)
-
-```shell
-ros2 launch llm_ros llm_demo.launch.py mode:=mono+ rerun:=false rviz:=true
-```
-
-<p align="center">
-  <img src="media/demo_mono+_indoor_0_rviz.gif" alt="SpatialFusion-LM Monocular+ LLM Indoor Demo" style="max-width: 100%; height: auto;"/><br/>
-  <em>SpatialFusion-LM performing stereo monocular+ estimation, 3D reconstruction, and spatial layout prediction on indoor scene <code>indoor_0</code>.</em>
-</p>
 
 ## ⚙️ Launch Configuration Options
 
