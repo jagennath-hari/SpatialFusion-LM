@@ -11,13 +11,23 @@ SpatialFusion-LM is a unified framework for spatial 3D scene understanding from 
 </div>
 
 <p align="center">
-  <a href="https://github.com/jagennath-hari/SpatialFusion-LM">
+  <a href="https://docs.ros.org/en/humble/index.html">
     <img src="https://img.shields.io/badge/ROS2-Humble-blue" alt="ROS2">
-    <img src="https://img.shields.io/badge/Depth-UniK3D%20%7C%20FoundationStereo-yellow" alt="Depth Estimation">
+  </a>
+  <a href="https://lpiccinelli-eth.github.io/pub/unik3d/">
+    <img src="https://img.shields.io/badge/Monocular%20Depth-UniK3D-yellow" alt="UniK3D">
+  </a>
+  <a href="https://nvlabs.github.io/FoundationStereo/">
+    <img src="https://img.shields.io/badge/Stereo%20Depth-FoundationStereo-yellowgreen" alt="FoundationStereo">
+  </a>
+  <a href="https://manycore-research.github.io/SpatialLM/">
     <img src="https://img.shields.io/badge/LLM-SpatialLM-purple" alt="SpatialLM">
+  </a>
+  <a href="https://rerun.io">
     <img src="https://img.shields.io/badge/Logging%20%7C%20Visualization-Rerun-orange" alt="Rerun">
   </a>
 </p>
+
 
 <p align="center">
   <table style="width: 100%;">
