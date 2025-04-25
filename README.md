@@ -12,7 +12,7 @@ SpatialFusion-LM is a unified framework for spatial 3D scene understanding from 
 
 <p align="center">
   <a href="https://docs.ros.org/en/humble/index.html">
-    <img src="https://img.shields.io/badge/ROS2-Humble-blue" alt="ROS2">
+    <img src="https://img.shields.io/badge/ROS%202-Humble-blue" alt="ROS 2">
   </a>
   <a href="https://lpiccinelli-eth.github.io/pub/unik3d/">
     <img src="https://img.shields.io/badge/Monocular%20Depth-UniK3D-yellow" alt="UniK3D">
@@ -95,7 +95,7 @@ SpatialFusion-LM is a unified framework for spatially grounded 3D scene understa
 
 The architecture decouples 3D scene inference into three core stages: (1) neural depth prediction, (2) back-projection and point cloud generation, and (3) spatial layout prediction via large-scale language models trained for 3D relational reasoning. Notably, the spatial reasoning is performed over instantaneous point clouds reconstructed in the local camera frame, rather than accumulated global maps, enabling frame-wise layout estimation in dynamic or unstructured environments.
 
-SpatialFusion-LM supports real-time inference, dataset extensibility, and structured logging through Rerun and ROS2, making it suitable for research in vision-language grounding, scene reconstruction, and robotics.
+SpatialFusion-LM supports real-time inference, dataset extensibility, and structured logging through Rerun and ROS 2, making it suitable for research in vision-language grounding, scene reconstruction, and robotics.
 
 </div>
 
@@ -105,7 +105,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - 🔍 Neural depth estimation with metric 3D reconstruction
 - 🧱 Differentiable point cloud generation in the camera frame
 - 🧠 Language-conditioned spatial layout prediction
-- 🧩 Modular ROS2 architecture (plug-and-play components)
+- 🧩 Modular ROS 2 architecture (plug-and-play components)
 - 🌀 Real-time inference and visualization
 - 📊 Integrated logging via [**Rerun**](https://www.rerun.io/)
 
@@ -116,7 +116,7 @@ SpatialFusion-LM supports real-time inference, dataset extensibility, and struct
 - [ ] Fix [**UniK3D**](https://lpiccinelli-eth.github.io/pub/unik3d/) bug in CUDA Memeory stream for async error while running [**SpatialLM**](https://manycore-research.github.io/SpatialLM/) in parallel
 - [x] **(2025-04-24)** Expand evaluation to TUM, Replica, and with one custom recorded dataset
 
-## 🗃️ Download TUM and Replica ROS2 datasets
+## 🗃️ Download TUM and Replica ROS 2 datasets
 
 This script will prompt you to select one or more datasets to download:
 
@@ -203,7 +203,7 @@ ros2 launch llm_ros llm_demo.launch.py mode:=stereo spatialLM:=false rerun:=true
 
 ### 🧪 Run with TUM Dataset
 
-SpatialFusion-LM supports pre-recorded ROS2 bags from the TUM RGB-D dataset. The `llm_demo_tum.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
+SpatialFusion-LM supports pre-recorded ROS 2 bags from the TUM RGB-D dataset. The `llm_demo_tum.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
 
 ```shell
 ros2 launch llm_ros llm_demo_tum.launch.py \
@@ -213,7 +213,7 @@ ros2 launch llm_ros llm_demo_tum.launch.py \
   rerun:=true \
   rviz:=true
 ```
->  This assumes you have already downloaded the ROS2 TUM dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
+>  This assumes you have already downloaded the ROS 2 TUM dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
 
 <p align="center">
   <table style="width: 100%;">
@@ -232,7 +232,7 @@ ros2 launch llm_ros llm_demo_tum.launch.py \
 
 ### 🧪 Run with Replica Dataset
 
-SpatialFusion-LM supports pre-recorded ROS2 bags from the Replica dataset. The `llm_demo_replica.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
+SpatialFusion-LM supports pre-recorded ROS 2 bags from the Replica dataset. The `llm_demo_replica.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
 
 ```shell
 ros2 launch llm_ros llm_demo_replica.launch.py \
@@ -242,7 +242,7 @@ ros2 launch llm_ros llm_demo_replica.launch.py \
   rerun:=true \
   rviz:=true
 ```
->  This assumes you have already downloaded the ROS2 Replica dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
+>  This assumes you have already downloaded the ROS 2 Replica dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
 
 <p align="center">
   <table style="width: 100%;">
@@ -259,9 +259,9 @@ ros2 launch llm_ros llm_demo_replica.launch.py \
   </table>
 </p>
 
-## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
+## 🛠️ Using SpatialFusion-LM with Your Own ROS 2 Topics
 
-To run SpatialFusion-LM on a live ROS2 system or your own dataset:
+To run SpatialFusion-LM on a live ROS 2 system or your own dataset:
 
 ### 1️⃣ Use `llm.launch.py` for direct topic-level control
 
@@ -300,7 +300,7 @@ ros2 launch llm_ros llm.launch.py \
 ```shell
 ros2 launch llm_ros llm.launch.py -s
 ```
-|Parameter | Description | Default | ROS Msg Type |
+|Parameter | Description | Default | ROS 2 Msg Type |
 |:----------|:-----------:|:-------:|--------------:|
 |`rgb_image` | RGB image topic | '' | `sensor_msgs/msg/Image` |
 |`rgb_info` | RGB camera info topic | '' | `sensor_msgs/msg/CameraInfo` |
@@ -317,7 +317,7 @@ ros2 launch llm_ros llm.launch.py -s
 
 These are the outputs published by the core_node.py:
 
-|Topic|Description|ROS Msg Type|
+|Topic|Description|ROS 2 Msg Type|
 |:----|:---------:|-----------:|
 |`/spatialLM/depth`|	Predicted depth map (1-channel float)|	`sensor_msgs/msg/Image`|
 |`/spatialLM/cloud`|	Reconstructed 3D point cloud|	`sensor_msgs/msg/PointCloud2`|
@@ -335,7 +335,7 @@ These are the outputs published by the core_node.py:
 ## 📈 Performance Benchmarks
 
 Measured on a single NVIDIA RTX A6000 (48 GB VRAM) at 1920×1080 resolution.
-Input images are automatically resized to model-specific inference resolution, and values may vary depending on hardware, backend load, and ROS2 message overhead.
+Input images are automatically resized to model-specific inference resolution, and values may vary depending on hardware, backend load, and ROS 2 message overhead.
 
 > Measured using Headless mode without Rerun or RVIZ.
 
