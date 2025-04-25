@@ -179,7 +179,7 @@ ros2 launch llm_ros llm_demo.launch.py mode:=stereo spatialLM:=false rerun:=true
 
 ### 🧪 Run with TUM Dataset
 
-SpatialFusion-LM supports pre-recorded ROS2 bags from the TUM RGB-D dataset. The `tum.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
+SpatialFusion-LM supports pre-recorded ROS2 bags from the TUM RGB-D dataset. The `llm_demo_tum.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
 
 ```shell
 ros2 launch llm_ros llm_demo_tum.launch.py \
@@ -200,6 +200,31 @@ ros2 launch llm_ros llm_demo_tum.launch.py \
 <p align="center">
   <img src="media/demo_mono_depth_tum_desk.gif" alt="SpatialFusion-LM Mono+ TUM desk Demo" style="max-width: 100%; height: auto;"/><br/>
   <em>SpatialFusion-LM performing monocular estimation and 3D reconstruction on TUM scene <code>desk</code>.</em>
+</p>
+
+### 🧪 Run with Replica Dataset
+
+SpatialFusion-LM supports pre-recorded ROS2 bags from the Replica dataset. The `llm_demo_replica.launch.py` launch file is preconfigured and `mono` or `mono+` modes depending on intrinsics.
+
+```shell
+ros2 launch llm_ros llm_demo_replica.launch.py \
+  mode:=mono+ \
+  bag_path:=/datasets/replica_office2 \
+  spatialLM:=true \
+  rerun:=true \
+  rviz:=true
+```
+>  This assumes you have already downloaded the ROS2 Replica dataset. If not, you can follow the provided script `scripts/download_dataset.sh` to do this.
+
+<p align="center">
+  <img src="media/demo_mono+_replica_office2.gif" alt="SpatialFusion-LM Mono+ Replica office2 Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing monocular+ estimation, 3D reconstruction, and spatial layout prediction on Replica scene <code>office2</code>.</em>
+</p>
+
+
+<p align="center">
+  <img src="media/demo_mono_replica_room0.gif" alt="SpatialFusion-LM Mono Replica room0 Demo" style="max-width: 100%; height: auto;"/><br/>
+  <em>SpatialFusion-LM performing monocular estimation and 3D reconstruction on Replica scene <code>room0</code>.</em>
 </p>
 
 ## 🛠️ Using SpatialFusion-LM with Your Own ROS2 Topics
