@@ -115,7 +115,6 @@ The `llm_demo.launch.py` file accepts the following arguments:
 | `spatialLM`  | bool    | Enable or disable layout prediction via SpatialLM                           | `true`               |
 | `rerun`      | bool    | Enable or disable logging to [**Rerun**](https://rerun.io)                      | `true`               |
 | `rviz`       | bool    | Enable or disable RVIZ visualization                                        | `true`               |
-| `bag_path`   | string  | Path to the ROS2 bag file (e.g., `/datasets/indoor_0`)                      | `/datasets/indoor_0` |
 
 ### 📸 Mono, 📷 Mono+, 📷 📷 Stereo?
 
