@@ -3,9 +3,9 @@
 <package format="3">
   <name>llm_ros</name>
   <version>0.0.0</version>
-  <description>A ROS2 pkg to use a spatial LLM for spatial understanding.</description>
+  <description>A ROS 2 pkg to use a spatialLM along with UniK3D and FoundationStereo for spatial understanding.</description>
   <maintainer email="jh7454@nyu.edu">Hari</maintainer>
-  <license>BSD-3-Clause</license>
+  <license>GPL-3.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
