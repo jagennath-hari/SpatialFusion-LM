@@ -351,7 +351,7 @@ Input images are automatically resized to model-specific inference resolution, a
 | Mono+   | 126.1               | 7.87    | 4460 MiB  | UniK3D (ViT-L) |
 | Stereo  | 292.5               | 3.35    | 2126 MiB  | FoundationStereo (ViT-S) |
 
-> A signficant VRAM of ~8192 MiB is needed spatialLM:=true.
+> A signficant VRAM of ~8192 MiB is needed when spatialLM:=true.
 
 ## 🤝 Contributing
 
