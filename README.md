@@ -25,9 +25,7 @@ SpatialFusion-LM is a unified framework for spatial 3D scene understanding from 
   </table>
 </p>
 
-
-# 🚀 Quick Start
-## 🖥️ Tested Configuration
+# 🖥️ Tested Configuration
 SpatialFusion-LM has been tested on:
 
 - 🐧 **Ubuntu:** 24.04  
@@ -38,6 +36,9 @@ SpatialFusion-LM has been tested on:
 > Other modern Ubuntu + CUDA setups may work, but this is the validated reference configuration.
 
 > A GPU with ≥ 24 GB of VRAM is recommended to ensure stable real-time inference and efficient handling of high-resolution inputs across all components.
+
+
+# 🚀 Quick Start
 
 1. Clone the repo
 
