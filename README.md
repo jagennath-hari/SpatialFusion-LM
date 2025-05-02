@@ -14,7 +14,7 @@ SpatialFusion-LM is a unified framework for spatial 3D scene understanding from 
   <a href="https://docs.ros.org/en/humble/index.html">
     <img src="https://img.shields.io/badge/ROS%202-Humble-blue" alt="ROS 2">
   </a>
-  <a href="https://lpiccinelli-eth.github.io/pub/unik3d/">
+  <a href="https://github.com/lpiccinelli-eth/UniK3D">
     <img src="https://img.shields.io/badge/Monocular%20Depth-UniK3D-yellow" alt="UniK3D">
   </a>
   <a href="https://nvlabs.github.io/FoundationStereo/">
